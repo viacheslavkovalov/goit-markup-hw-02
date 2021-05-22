@@ -16,73 +16,78 @@
   --secondary-bg-color: #f5f4fa;
   --footer-color: #2f303a;
   --logo-color: #000000;
-  --button-bg-color: #f5f4fa;
+  --button-accent-color: #188ce8;
+
   --hero-font-weight: 900;
   --title-font-weight: 700;
   --nav-font-weight: 500;
   --text-font-weight: 400;
-  --title-font-size: 36px;
+
   --hero-font-size: 44px;
+  --title-font-size: 36px;
+  --logo-font-size: 26px;
   --button-font-size: 16px;
   --item-font-size: 14px;
 }
 
 .page {
   box-sizing: border-box;
-  margin: 0px;
-  padding: 0px;
-  width: 1600px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+
+  font-family: "Roboto", sans-serif;
   font-weight: var(--text-font-weight);
   font-size: var(--item-font-size);
+
   color: var(--primary-text-color);
   background-color: var(--primary-white-color);
+
+  line-height: 1.173;
+  letter-spacing: 0.03em;
 }
 /* стили списков */
 .list {
   list-style: none;
   padding: inherit;
 }
+/* стили списков */
 /* cтили ссылок */
 .link {
   text-decoration: none;
   font-style: normal;
 }
-/* лого */
-.logo {
-  color: var(--logo-color);
-  font-family: "raleway";
-  font-weight: var(--title-font-weight);
-  font-size: 26px;
-  line-height: 1.173;
-}
-.logo-web {
-  color: var(--accent-color);
-}
-/* Site nav */
-.site-nav .link {
+.site-nav .link,
+.info .link {
   color: var(--title-text-color);
   font-weight: var(--nav-font-weight);
-  line-height: 1.172;
+  letter-spacing: 0.02em;
+  line-height: 1.143;
 }
-
 .site-nav .link:hover,
-.site-nav .link:focus {
+.info .link:hover,
+.address .link:hover,
+.site-nav .link:focus,
+.info .link:focus,
+.address .link:focus {
   color: var(--accent-color);
 }
 .site-nav .link.current {
   color: var(--accent-color);
 }
-.info .link:hover,
-.info .link:focus {
-  color: var(--accent-color);
-}
 .info .link {
   color: var(--primary-text-color);
-  font-weight: var(--nav-font-weight);
-  line-height: 1.172;
 }
+/* cтили ссылок */
+/* лого */
+.logo {
+  color: var(--logo-color);
+  font-family: "raleway";
+  font-weight: var(--title-font-weight);
+  font-size: var(--logo-font-size);
+  line-height: 1.192;
+}
+.logo-web {
+  color: var(--accent-color);
+}
+/* лого */
 
 /* cтили кнопок */
 .button {
@@ -92,101 +97,110 @@
   line-height: 1.625;
   border-radius: 4px;
   color: var(--title-text-color);
-  background-color: var(--button-bg-color);
-  letter-spacing: 6%;
+  background-color: var(--secondary-bg-color);
+  letter-spacing: 0.06em;
   text-align: center;
   cursor: pointer;
 }
 .button.primary {
   line-height: 1.875;
   color: var(--primary-white-color);
-  border-color: rgba(24, 140, 232, 1);
+  background-color: var(--button-accent-color);
+  border-color: var(--accent-color);
   filter: drop-shadow(0 4px rgba(0, 0, 0, 0.25));
-  background-color: #188ce8;
 }
-.button.nav:hover,
-.button.nav:focus {
+.button.primary:hover,
+.filter .button:hover,
+.filter .button:focus,
+.button.primary:focus {
   color: var(--primary-white-color);
   background-color: var(--accent-color);
 }
+/* cтили кнопок */
+
+/* cтили карточек */
+.card {
+  line-height: 1.188;
+  display: inline-block;
+}
+/* cтили карточек */
 
 /* Section */
-.section.title {
+.profile-title,
+.team-title {
   font-weight: var(--title-font-weight);
   font-size: var(--title-font-size);
   color: var(--title-text-color);
-  line-height: 1.171;
-  letter-spacing: 3%;
   text-align: center;
+  line-height: 1.167;
 }
 /* Hero */
 .hero {
   background-color: var(--footer-color);
-  height: 600px;
 }
 .hero-title {
   font-weight: var(--hero-font-weight);
   font-size: var(--hero-font-size);
-  line-height: 1.363;
+  line-height: 1.364;
   color: var(--primary-white-color);
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
 }
+
 /* Features */
-.features.title {
-  color: var(--title-text-color);
+.features .card {
+  width: 270px;
+  height: 75px;
+}
+.features .title {
   font-weight: var(--title-font-weight);
   font-size: var(--item-font-size);
-  line-height: 1.172;
+  color: var(--title-text-color);
   text-transform: uppercase;
-  letter-spacing: 3%;
+  line-height: 1.143;
 }
-.features.text {
+.features .text {
   line-height: 1.714;
-  letter-spacing: 3%;
 }
+/* Features */
 
 /* Our profile */
 
 /* Our team */
+.team-title,
+.profile-title {
+  line-height: 1.167;
+}
 .team.section {
   background-color: var(--secondary-bg-color);
 }
-.card {
-  display: inline-block;
-}
-.card.features {
+.team .card {
+  background-color: var(--primary-white-color);
+  text-align: center;
   width: 270px;
-  height: 75px;
+  height: 368px;
 }
-.employer.name {
+.card .name {
   color: var(--title-text-color);
   font-weight: var(--nav-font-weight);
   font-size: var(--button-font-size);
-  line-height: 1.171;
-  text-align: center;
-  letter-spacing: 3%;
 }
-.position {
+.card .position {
   font-size: var(--button-font-size);
-  line-height: 1.171;
-  letter-spacing: 3%;
-  text-align: center;
 }
 /* Footer */
 .footer {
+  line-height: 1.714;
   background-color: var(--footer-color);
-  width: auto;
-  height: 252px;
 }
 .location {
   color: var(--primary-white-color);
   font-style: normal;
-  line-height: 1.714;
-  letter-spacing: 3%;
 }
 .footer .logo {
   color: var(--primary-white-color);
 }
 .address .link {
   color: rgba(255, 255, 255, 0.6);
-  line-height: 1.714;
 }
