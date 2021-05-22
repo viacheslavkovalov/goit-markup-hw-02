@@ -26,6 +26,7 @@
   --hero-font-size: 44px;
   --title-font-size: 36px;
   --logo-font-size: 26px;
+  --button-product-size: 18px;
   --button-font-size: 16px;
   --item-font-size: 14px;
 }
@@ -116,6 +117,11 @@
   color: var(--primary-white-color);
   background-color: var(--accent-color);
 }
+.filter .button {
+  font-weight: var(--nav-font-weight);
+  letter-spacing: 0.03em;
+  border: 1px;
+}
 /* cтили кнопок */
 
 /* cтили карточек */
@@ -163,9 +169,15 @@
 .features .text {
   line-height: 1.714;
 }
+
 /* Features */
 
 /* Our profile */
+.profile.list,
+.team.list {
+  display: flex;
+  justify-content: center;
+}
 
 /* Our team */
 .team-title,
@@ -195,12 +207,44 @@
   background-color: var(--footer-color);
 }
 .location {
-  color: var(--primary-white-color);
   font-style: normal;
 }
-.footer .logo {
+.footer .logo,
+.location {
   color: var(--primary-white-color);
 }
 .address .link {
   color: rgba(255, 255, 255, 0.6);
+}
+/* Footer */
+
+/* Portfolio */
+.filter.list {
+  display: flex;
+  justify-content: center;
+}
+.filter .item {
+  display: inline-block;
+  line-height: 1.625;
+}
+.filter .button:hover,
+.filter .button:focus {
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.product .card {
+  border: 1px solid var(--secondary-bg-color);
+  background-color: var(--primary-white-color);
+}
+
+.product .name {
+  color: var(--title-text-color);
+  font-weight: var(--title-font-weight);
+  font-size: var(--button-product-size);
+  line-height: 2;
+  letter-spacing: 0.06em;
+}
+.link .category {
+  font-size: var(--button-font-size);
+  line-height: 1.875;
+  color: var(--primary-text-color);
 }
