@@ -21,7 +21,6 @@
   --hero-font-weight: 900;
   --title-font-weight: 700;
   --nav-font-weight: 500;
-  --text-font-weight: 400;
 
   --hero-font-size: 44px;
   --title-font-size: 36px;
@@ -31,11 +30,10 @@
   --item-font-size: 14px;
 }
 
-.page {
+body {
   box-sizing: border-box;
 
   font-family: "Roboto", sans-serif;
-  font-weight: var(--text-font-weight);
   font-size: var(--item-font-size);
 
   color: var(--primary-text-color);
@@ -55,30 +53,34 @@
   text-decoration: none;
   font-style: normal;
 }
-.site-nav .link,
-.info .link {
+.site-nav-link,
+.info-link {
+  text-decoration: none;
+  font-style: normal;
   color: var(--title-text-color);
   font-weight: var(--nav-font-weight);
   letter-spacing: 0.02em;
   line-height: 1.143;
 }
-.site-nav .link:hover,
-.info .link:hover,
-.address .link:hover,
-.site-nav .link:focus,
-.info .link:focus,
-.address .link:focus {
+.site-nav-link:hover,
+.info-link:hover,
+.address-link:hover,
+.site-nav-link:focus,
+.info-link:focus,
+.address-link:focus {
   color: var(--accent-color);
 }
-.site-nav .link.current {
+.site-nav-link.current {
   color: var(--accent-color);
 }
-.info .link {
+.info-link {
   color: var(--primary-text-color);
 }
 /* cтили ссылок */
 /* лого */
-.logo {
+.logo-link {
+  text-decoration: none;
+  font-style: normal;
   color: var(--logo-color);
   font-family: "raleway";
   font-weight: var(--title-font-weight);
@@ -111,13 +113,13 @@
   filter: drop-shadow(0 4px rgba(0, 0, 0, 0.25));
 }
 .button.primary:hover,
-.filter .button:hover,
-.filter .button:focus,
+.filter.button:hover,
+.filter.button:focus,
 .button.primary:focus {
   color: var(--primary-white-color);
   background-color: var(--accent-color);
 }
-.filter .button {
+.filter.button {
   font-weight: var(--nav-font-weight);
   letter-spacing: 0.03em;
   border: 1px;
@@ -125,7 +127,10 @@
 /* cтили кнопок */
 
 /* cтили карточек */
-.card {
+.team.card,
+.features.card,
+.profile.card,
+.product.card {
   line-height: 1.188;
   display: inline-block;
 }
@@ -155,18 +160,18 @@
 }
 
 /* Features */
-.features .card {
+.features.card {
   width: 270px;
   height: 75px;
 }
-.features .title {
+.features.title {
   font-weight: var(--title-font-weight);
   font-size: var(--item-font-size);
   color: var(--title-text-color);
   text-transform: uppercase;
   line-height: 1.143;
 }
-.features .text {
+.features.text {
   line-height: 1.714;
 }
 
@@ -187,18 +192,18 @@
 .team.section {
   background-color: var(--secondary-bg-color);
 }
-.team .card {
+.team.card {
   background-color: var(--primary-white-color);
   text-align: center;
   width: 270px;
   height: 368px;
 }
-.card .name {
+.card.name {
   color: var(--title-text-color);
   font-weight: var(--nav-font-weight);
   font-size: var(--button-font-size);
 }
-.card .position {
+.card.position {
   font-size: var(--button-font-size);
 }
 /* Footer */
@@ -209,11 +214,13 @@
 .location {
   font-style: normal;
 }
-.footer .logo,
+.footer.logo-link,
 .location {
   color: var(--primary-white-color);
 }
-.address .link {
+.address-link {
+  text-decoration: none;
+  font-style: normal;
   color: rgba(255, 255, 255, 0.6);
 }
 /* Footer */
@@ -223,28 +230,28 @@
   display: flex;
   justify-content: center;
 }
-.filter .item {
+.filter.item {
   display: inline-block;
   line-height: 1.625;
 }
-.filter .button:hover,
-.filter .button:focus {
+.filter.button:hover,
+.filter.button:focus {
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 /* product */
-.product .card {
+.product.card {
   border: 1px solid var(--secondary-bg-color);
   background-color: var(--primary-white-color);
 }
 
-.product .name {
+.product.name {
   color: var(--title-text-color);
   font-weight: var(--title-font-weight);
   font-size: var(--button-product-size);
   line-height: 2;
   letter-spacing: 0.06em;
 }
-.link .category {
+.product.category {
   font-size: var(--button-font-size);
   line-height: 1.875;
   color: var(--primary-text-color);
